@@ -1,6 +1,49 @@
+$containerWidth : 800px;
+
+$toolOptionBackgroundColor : lightgrey;
+$toolOptionLinkColor : darkgrey;
+$toolOptionWidth : 200px;
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+.clear:before,
+.clear:after {
+    content: " ";
+    display: table;
+}
+
+.clear:after {
+    clear: both;
+}
+.container{
+    width:$containerWidth;
+    margin:10px auto;
+}
+
+.toolOptions{
+    width:$toolOptionWidth;
+    background:$toolOptionBackgroundColor;
+
+    ul{
+        list-style-type:none;
+
+        li{
+            a{
+                color: $toolOptionLinkColor;
+                text-decoration:none;
+            }
+        }
+    }
+}
 .paint{
     position:relative;
-
+    left: $toolOptionWidth;
+    top:0;
     canvas{
         position:absolute;
         top:1px;

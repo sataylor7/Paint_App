@@ -1,11 +1,15 @@
-define(['jQuery'], function(jq){
+define(['jQuery', '../templates/templates'], function(jq, Templates){
 
     return {
         render : function(container){
-            var testing = jq(document.createElement('div'))
-                          .text('howdy');
+            var options = {
+                    tools :  ['line', 'rectangle', 'circle', 'oval','pencil'],
+                    opts : ['fill','stroke'],
+                    settings : ['linewidth', 'linecap', 'linesize']
+                },
+                toolTemp = Handlebars.templates['drawingAppTools'];
 
-            container.append(testing);
+            container.append(toolTemp(options));
         }
     }
 });
