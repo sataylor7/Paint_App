@@ -1,0 +1,12 @@
+.paint{
+    position:relative;
+
+    canvas{
+        position:absolute;
+        top:1px;
+        left:1px;
+    }
+    #paintMe{
+        border:1px solid green;
+    }
+}

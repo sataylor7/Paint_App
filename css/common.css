@@ -1,0 +1,8 @@
+.paint {
+  position: relative; }
+  .paint canvas {
+    position: absolute;
+    top: 1px;
+    left: 1px; }
+  .paint #paintMe {
+    border: 1px solid green; }
